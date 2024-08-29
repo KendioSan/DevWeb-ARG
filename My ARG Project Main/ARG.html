@@ -3,27 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lundgren Legatum</title>
+    <title>Lundgren Legatum - Quebra-cabeça</title>
     <link rel="stylesheet" href="ARG.css">
+    <script src="ARG.js" defer></script> <!-- Certifique-se de que o script está carregando corretamente -->
 </head>
 <body>
+    <!-- Cabeçalho da página -->
     <header>
         <div class="container">
-            <h1>Recrutamento Ordo Virtutis</h1>
+            <h1>Descubra o Código</h1>
             <nav>
+                <!-- Menu de navegação -->
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="ARG.html">Início</a></li>
+                    <li><a href="ARGSobre.html">Sobre</a></li>
+                    <li><a href="ARGForms.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <!-- Conteúdo principal -->
     <main>
+        <!-- Seção do Quebra-Cabeça -->
+        <section id="puzzle" class="container">
+            <h2>Revele o Código Oculto</h2>
+            <p>Há mais neste texto do que os olhos podem ver. Clique nas palavras certas para revelar o código oculto:</p>
+            <p id="puzzleText">A sombra do <span class="hidden-link" data-code="3">passado</span> esconde verdades que apenas o <span class="hidden-link" data-code="7">escolhido</span> pode desvendar. Mas <span class="hidden-link" data-code="9">cuidado</span>, pois o que se <span class="hidden-link" data-code="5">revela</span> nem sempre é o que parece.</p>
+            <p id="codeOutput"></p>
+        </section>
+
+        <!-- Campo para inserir o código revelado -->
+        <section id="codeEntry" class="container">
+            <h3>Insira o Código Completo:</h3>
+            <input type="text" id="codeInput" placeholder="Digite o código aqui">
+            <button onclick="checkCode()">Enviar</button>
+            <p id="codeMessage"></p>
+        </section>
+    </main>
+
+    <main>
+        <!-- Seção de boas-vindas -->
         <section id="home" class="container">
             <h2>Saber tudo é perder tudo</h2>
-            <p><em>Se você encontrou esse site, algum interesse no paranormal deva existir.</em></p>
+            <p><em>Você não está aqui por acaso. Algo, ou alguém, te trouxe até nós. Este é um lugar de segredos, conspirações, e verdades ocultas que desafiam o próprio tecido da realidade. </em></p>
             <img src="og-image.png" alt="Imagem misteriosa">
+            <p>Explore os mistérios sombrios que a maioria teme em conhecer. Lembre-se: conhecimento é poder, mas também é a chave para a loucura.</p>
+            <button id="jumpscareButton">Clique por sua conta e risco</button> <!-- Botão de jumpscare -->
+            <p><a href="ARGForms.html">Fale Conosco</a></p>
         </section>
+    </main>
+
+        <!-- Seção sobre o paranormal -->
         <section id="sobre" class="container">
             <h2>Sobre o paranormal</h2>
             <p><em>Somos agentes com a missão de proteger o mundo do paranormal.</em></p>
@@ -33,23 +64,32 @@
                 <li>Perigos</li>
             </ul>
         </section>
-        <section id="home" class="container">
+
+        <!-- Seção de interação com o usuário -->
+        <section id="interaction" class="container">
+            <!-- Botão que ativa o jumpscare -->
             <button id="jumpscareButton">Clique por sua conta e risco</button>
+            <!-- Link para o formulário de contato -->
             <p><a href="ARGForms.html">Fale Conosco</a></p>
         </section>
     </main>
+
+<!-- Elemento de vídeo para o jumpscare -->
+<div id="jumpscare" class="jumpscare-hidden">
+    <video id="jumpscareVideo" width="100%" height="100%" preload="auto" controls>
+        <source src="media/NIDERE.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+</div>
+
+    <!-- Rodapé da página -->
     <footer>
         <div class="container">
             <p>&copy; 2024 Projeto Web. Todos os direitos reservados à Ktgxhhxbd -15.</p>
         </div>
     </footer>
 
-    <!-- Jumpscare -->
-    <div id="jumpscare" class="jumpscare-hidden">
-        <img src="jumpscare-image.jpg" alt="Imagem assustadora">
-        <audio id="scream-audio" src="scream.mp3"></audio>
-    </div>
-
-    <script src="script.js"></script>
+    <!-- Importação do script JavaScript -->
+    <script src="ARG.js"></script>
 </body>
 </html>

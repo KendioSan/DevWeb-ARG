@@ -9,8 +9,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #480000;
-    color: #ffffff;
+    background-color: #480000; /* Cor de fundo temática */
+    color: #ffffff; /* Cor do texto */
     padding: 20px;
 }
 
@@ -31,19 +31,16 @@ header {
 
 header h1 {
     margin-bottom: 10px;
-    
 }
 
 nav ul {
-    list-style: none;
+    list-style: none; /* Remove marcadores */
     padding: 0;
-    
 }
 
 nav ul li {
     display: inline;
     margin: 0 10px;
-    
 }
 
 nav ul li a {
@@ -62,7 +59,7 @@ section h2 {
 }
 
 section img {
-    max-width: 100%;
+    max-width: 100%; /* Responsivo */
     height: auto;
 }
 
@@ -86,7 +83,7 @@ form textarea {
 }
 
 form textarea {
-    resize: vertical;
+    resize: vertical; /* Permite redimensionamento vertical */
 }
 
 form input[type="submit"] {
@@ -99,7 +96,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background: #555;
+    background: #555; /* Efeito de hover */
 }
 
 /* Rodapé */
@@ -118,7 +115,7 @@ footer {
     }
 
     nav ul li {
-        display: block;
+        display: block; /* Muda para layout vertical */
         margin: 10px 0;
     }
 
@@ -127,25 +124,31 @@ footer {
     }
 }
 
-/* Jumpscare estilo */
+/* Estilo do Jumpscare */
 #jumpscare {
-    display: none;
-    position: fixed;
+    display: none; /* Inicialmente escondido */
+    position: fixed; /* Fixa o jumpscare em relação à janela de visualização */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto com transparência */
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 9999; /* Garante que fique acima de todos os outros elementos */
 }
 
-#jumpscare img {
-    max-width: 100%;
-    max-height: 100%;
+.jumpscare-hidden {
+    display: none; /* Inicialmente escondido */
 }
 
 .jumpscare-visible {
-    display: flex; /* Torna visível e centraliza a imagem */
+    display: flex; /* Torna visível e centraliza o vídeo */
+    justify-content: center;
+    align-items: center;
+}
+
+#jumpscareVideo {
+    max-width: 100%;
+    max-height: 100%;
 }
